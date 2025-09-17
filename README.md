@@ -8,7 +8,7 @@ Express.js: Web framework for handling API routes.
 
 Socket.IO: Enables real-time, bidirectional communication.
 
-PostgreSQL: Primary database for user and score data.
+MongoDB: NoSQL database for user and score data.
 
 Redis: In-memory data store used for caching.
 
@@ -46,18 +46,17 @@ PORT=4000
 MONGO_URI=mongodb://127.0.0.1:27017/leaderboard_dev
 JWT_SECRET=devsecret123
 REDIS_URL=redis://127.0.0.1:6379
-
 Running the Services
 Start the Redis Docker container:
 
 Bash
 
 docker run --name leaderboard-redis -p 6379:6379 -d redis
-Start the backend server:
+Start the backend server in development mode:
 
 Bash
 
-npm start
+npm run dev
 The API will be available at http://localhost:4000.
 
 API Endpoints
